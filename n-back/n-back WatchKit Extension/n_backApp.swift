@@ -12,7 +12,7 @@ struct n_backApp: App {
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView()
+                NBackMainMenuView()
             }
         }
 

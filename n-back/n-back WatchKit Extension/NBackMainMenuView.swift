@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  NBackMainMenuView.swift
 //  n-back WatchKit Extension
 //
 //  Created by Vincent Steffens on 12/6/23.
@@ -8,7 +8,7 @@
 import SwiftUI
 import WatchKit
 
-struct ContentView: View {
+struct NBackMainMenuView: View {
     @State private var n: Int = 1
     
     var body: some View {
@@ -28,8 +28,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct NBackMainMenuView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        NBackMainMenuView()
     }
 }

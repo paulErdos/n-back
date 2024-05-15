@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F417CBBC2B3B6E40001E8D8D /* NumberPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F417CBBB2B3B6E40001E8D8D /* NumberPadView.swift */; };
+		F417CBBE2B3B6EFF001E8D8D /* NBackMainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F417CBBD2B3B6EFF001E8D8D /* NBackMainMenuView.swift */; };
+		F417CBC02B3B6F8D001E8D8D /* NBackMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F417CBBF2B3B6F8D001E8D8D /* NBackMain.swift */; };
 		F48602D22B2082900093B73E /* n-back WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F48602D12B2082900093B73E /* n-back WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F48602D72B2082910093B73E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F48602D62B2082910093B73E /* Assets.xcassets */; };
 		F48602DD2B2082920093B73E /* n-back WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F48602DC2B2082920093B73E /* n-back WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F48602E22B2082920093B73E /* n_backApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48602E12B2082920093B73E /* n_backApp.swift */; };
-		F48602E42B2082920093B73E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48602E32B2082920093B73E /* ContentView.swift */; };
 		F48602E62B2082920093B73E /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48602E52B2082920093B73E /* NotificationController.swift */; };
 		F48602E82B2082920093B73E /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48602E72B2082920093B73E /* NotificationView.swift */; };
 		F48602EA2B2082920093B73E /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48602E92B2082920093B73E /* ComplicationController.swift */; };
@@ -81,12 +83,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F417CBBB2B3B6E40001E8D8D /* NumberPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadView.swift; sourceTree = "<group>"; };
+		F417CBBD2B3B6EFF001E8D8D /* NBackMainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBackMainMenuView.swift; sourceTree = "<group>"; };
+		F417CBBF2B3B6F8D001E8D8D /* NBackMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBackMain.swift; sourceTree = "<group>"; };
 		F48602CD2B2082900093B73E /* n-back.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "n-back.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F48602D12B2082900093B73E /* n-back WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "n-back WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F48602D62B2082910093B73E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F48602DC2B2082920093B73E /* n-back WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "n-back WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F48602E12B2082920093B73E /* n_backApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = n_backApp.swift; sourceTree = "<group>"; };
-		F48602E32B2082920093B73E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F48602E52B2082920093B73E /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		F48602E72B2082920093B73E /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		F48602E92B2082920093B73E /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
@@ -165,7 +169,6 @@
 			children = (
 				F48602E12B2082920093B73E /* n_backApp.swift */,
 				F486031B2B2083A30093B73E /* CounterView.swift */,
-				F48602E32B2082920093B73E /* ContentView.swift */,
 				F48602E52B2082920093B73E /* NotificationController.swift */,
 				F48602E72B2082920093B73E /* NotificationView.swift */,
 				F48602E92B2082920093B73E /* ComplicationController.swift */,
@@ -173,6 +176,9 @@
 				F48602F02B2082930093B73E /* Info.plist */,
 				F48602F12B2082930093B73E /* PushNotificationPayload.apns */,
 				F48602ED2B2082930093B73E /* Preview Content */,
+				F417CBBB2B3B6E40001E8D8D /* NumberPadView.swift */,
+				F417CBBD2B3B6EFF001E8D8D /* NBackMainMenuView.swift */,
+				F417CBBF2B3B6F8D001E8D8D /* NBackMain.swift */,
 			);
 			path = "n-back WatchKit Extension";
 			sourceTree = "<group>";
@@ -390,12 +396,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F48602E62B2082920093B73E /* NotificationController.swift in Sources */,
-				F48602E42B2082920093B73E /* ContentView.swift in Sources */,
+				F417CBBE2B3B6EFF001E8D8D /* NBackMainMenuView.swift in Sources */,
 				F4B24D9A2B208FBA00465E94 /* NBackView.swift in Sources */,
+				F417CBC02B3B6F8D001E8D8D /* NBackMain.swift in Sources */,
 				F48602EA2B2082920093B73E /* ComplicationController.swift in Sources */,
 				F48602E22B2082920093B73E /* n_backApp.swift in Sources */,
 				F48602E82B2082920093B73E /* NotificationView.swift in Sources */,
 				F486031C2B2083A30093B73E /* CounterView.swift in Sources */,
+				F417CBBC2B3B6E40001E8D8D /* NumberPadView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
