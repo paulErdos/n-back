@@ -1,3 +1,11 @@
+//
+//  NumberPadView.swift
+//  n-back WatchKit Extension
+//
+//  Created by Vincent Steffens on 12/26/23.
+//
+
+import Foundation
 import SwiftUI
 
 struct NumberPadView: View {
@@ -8,50 +16,33 @@ struct NumberPadView: View {
         ["1", "2", "3"],
         ["4", "5", "6"],
         ["7", "8", "9"],
-        [".", "0", "⌫"]
+        //[".", "0", "⌫"],
+        //[".", "0", "⌫"]
     ]
     
     var body: some View {
-        GeometryReader { geometry in
-            let height = (geometry.size.height - 2 * CGFloat(self.rows.count + 1)) / ( CGFloat(self.rows.count) + 2)
-            let width = geometry.size.width / 3
-            
-            VStack(spacing: 0) {
-                ForEach(rows, id: \.self) { row in
-                    HStack(spacing: 0) {
-                        ForEach(row, id: \.self) { buttonTitle in
-                            Button(action: {
-                                self.buttonTapped(buttonTitle)
-                            }) {
-                                Text(buttonTitle)
-                                    .font(.title3)
-                                    .frame(height: height)
-                                    .background(Color.gray.opacity(0.2))
-                                    .cornerRadius(5)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 5)
-                                            .stroke(Color.black, lineWidth: 1)
-                                    )
-                            }
-                            .frame(width: width, height: height) // Apply the frame to the Button view
+        VStack(spacing: 5) {
+            ForEach(rows, id: \.self) { row in
+                HStack(spacing: 1) {
+                    ForEach(row, id: \.self) { buttonTitle in
+                        Button(action: {
+                            self.buttonTapped(buttonTitle)
+                        }) {
+                            Text(buttonTitle)
+                                .frame(width: 40, height: 40)
+                                .font(.title3)
+                                //.frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .background(Color.gray.opacity(0.2))
+                                .cornerRadius(10)
                         }
+                        .frame(width: 40, height: 40)
                     }
                 }
-                
-                Button(action: {
-                    self.enterTapped()
-                }) {
-                    Text("Enter")
-                        .font(.title)
-                        .frame(width: width, height: height)
-                        .background(Color.blue)
-                        .cornerRadius(4)
-                        .foregroundColor(.white)
-                }
-                .frame(width: geometry.size.width, height: height)
+                //.frame(maxWidth: .infinity) // Ensure each row takes full width
             }
-            .padding()
         }
+        //.padding()
+        //.frame(maxWidth: .infinity, maxHeight: .infinity) // Ensure the entire VStack takes up full space
     }
     
     private func buttonTapped(_ title: String) {
@@ -68,13 +59,14 @@ struct NumberPadView: View {
     }
 }
 
-struct NumberPadadContentView: View {
+struct NumberPadContentView: View {
     @State var text: String = ""
     @State var entered_entry: String = ""
     
     var body: some View {
-        VStack {
+        NavigationView {
             NumberPadView(text: $text, entered_entry: $entered_entry)
+               // .navigationBarTitle("Number Pad", displayMode: .inline) // Optional: if you want a title
         }
     }
 }
