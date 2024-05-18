@@ -45,6 +45,7 @@ struct NumberPadView: View {
         //.frame(maxWidth: .infinity, maxHeight: .infinity) // Ensure the entire VStack takes up full space
     }
     
+    // Next: update buttonTapped
     private func buttonTapped(_ title: String) {
         if title == "⌫" {
             text = String(text.dropLast())
@@ -58,7 +59,7 @@ struct NumberPadView: View {
         text = ""
     }
 }
-
+/*
 struct NumberPadContentView: View {
     @State var text: String = ""
     @State var entered_entry: String = ""
@@ -70,3 +71,4 @@ struct NumberPadContentView: View {
         }
     }
 }
+*/

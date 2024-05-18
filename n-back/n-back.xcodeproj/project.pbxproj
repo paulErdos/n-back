@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F40103022BF67AD90038A63B /* QueueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40103012BF67AD90038A63B /* QueueView.swift */; };
 		F417CBBC2B3B6E40001E8D8D /* NumberPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F417CBBB2B3B6E40001E8D8D /* NumberPadView.swift */; };
 		F417CBBE2B3B6EFF001E8D8D /* NBackMainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F417CBBD2B3B6EFF001E8D8D /* NBackMainMenuView.swift */; };
 		F417CBC02B3B6F8D001E8D8D /* NBackMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F417CBBF2B3B6F8D001E8D8D /* NBackMain.swift */; };
@@ -83,6 +84,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F40103012BF67AD90038A63B /* QueueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueView.swift; sourceTree = "<group>"; };
 		F417CBBB2B3B6E40001E8D8D /* NumberPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadView.swift; sourceTree = "<group>"; };
 		F417CBBD2B3B6EFF001E8D8D /* NBackMainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBackMainMenuView.swift; sourceTree = "<group>"; };
 		F417CBBF2B3B6F8D001E8D8D /* NBackMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBackMain.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				F4B24D992B208FBA00465E94 /* NBackView.swift */,
+				F40103012BF67AD90038A63B /* QueueView.swift */,
 				F48602D52B2082900093B73E /* n-back WatchKit App */,
 				F48602E02B2082920093B73E /* n-back WatchKit Extension */,
 				F48602F92B2082930093B73E /* n-backTests */,
@@ -403,6 +406,7 @@
 				F48602E22B2082920093B73E /* n_backApp.swift in Sources */,
 				F48602E82B2082920093B73E /* NotificationView.swift in Sources */,
 				F486031C2B2083A30093B73E /* CounterView.swift in Sources */,
+				F40103022BF67AD90038A63B /* QueueView.swift in Sources */,
 				F417CBBC2B3B6E40001E8D8D /* NumberPadView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
