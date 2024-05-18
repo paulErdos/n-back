@@ -1,17 +1,11 @@
-//
-//  QueueView.swift
-//  n-back WatchKit Extension
-//
-//  Created by Vincent Steffens on 5/16/24.
-//
-
 import Foundation
 import SwiftUI
 
 struct QueueView: View {
-    @State private var queue: [Int] = [1, 2, 3, 4, 5]
+    @Binding var queue: [Int]
 
-    mutating func updateQueue(newElement: Int) {
+    func updateQueue(newElement: Int) {
+        print("update called \(newElement)")
         if queue.count < 5 {
             queue.append(newElement)
         } else {
@@ -22,8 +16,8 @@ struct QueueView: View {
     
     var body: some View {
         HStack {
-            ForEach(queue, id: \.self) { number in
-                Text("\(number)")
+            ForEach(queue.indices, id: \.self) { index in
+                Text("\(queue[index])")
                     .padding()
                     .background(Color.blue)
                     .foregroundColor(.white)

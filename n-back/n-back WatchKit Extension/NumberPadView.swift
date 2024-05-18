@@ -9,13 +9,13 @@ import Foundation
 import SwiftUI
 
 struct NumberPadView: View {
-    @Binding var text: String
-    @Binding var entered_entry: String
+    @Binding var selection: Int
+    //@Binding var entered_entry: String
     
     let rows = [
-        ["1", "2", "3"],
-        ["4", "5", "6"],
-        ["7", "8", "9"],
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
         //[".", "0", "⌫"],
         //[".", "0", "⌫"]
     ]
@@ -28,7 +28,7 @@ struct NumberPadView: View {
                         Button(action: {
                             self.buttonTapped(buttonTitle)
                         }) {
-                            Text(buttonTitle)
+                            Text(String(buttonTitle))
                                 .frame(width: 40, height: 40)
                                 .font(.title3)
                                 //.frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -46,18 +46,21 @@ struct NumberPadView: View {
     }
     
     // Next: update buttonTapped
-    private func buttonTapped(_ title: String) {
-        if title == "⌫" {
-            text = String(text.dropLast())
-        } else {
-            text += title
-        }
+    private func buttonTapped(_ theSelection: Int) {
+        print("ButtonTapped \(theSelection)")
+        //if title == "⌫" {
+        //    text = String(text.dropLast())
+        //} else {
+        selection = theSelection
+            //text += title
+       // }
     }
-    
+    /*
     private func enterTapped() {
         entered_entry = text
         text = ""
     }
+     */
 }
 /*
 struct NumberPadContentView: View {
