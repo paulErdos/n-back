@@ -1,10 +1,16 @@
 import Foundation
 import SwiftUI
 
-struct QueueView: View {
-    @Binding var queue: [Int]
+struct QueueItem: Identifiable {
+    let id = UUID()
+    let value: Int
+}
 
-    func updateQueue(newElement: Int) {
+struct QueueView: View {
+    @Binding var queue: [QueueItem]
+
+    func updateQueue() {//newElement: Int) {
+        let newElement = QueueItem(value: Int.random(in: 1...9))
         print("update called \(newElement)")
         if queue.count < 5 {
             queue.append(newElement)
@@ -16,8 +22,8 @@ struct QueueView: View {
     
     var body: some View {
         HStack {
-            ForEach(queue.indices, id: \.self) { index in
-                Text("\(queue[index])")
+            ForEach(queue) { item in
+                Text("\(item.value)")
                     .padding()
                     .background(Color.blue)
                     .foregroundColor(.white)

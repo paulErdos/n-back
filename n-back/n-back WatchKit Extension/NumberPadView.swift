@@ -8,8 +8,13 @@
 import Foundation
 import SwiftUI
 
+struct IdentifiableInt: Identifiable {
+    let id = UUID()
+    let value: Int
+}
+
 struct NumberPadView: View {
-    @Binding var selection: Int
+    @Binding var selection: IdentifiableInt
     //@Binding var entered_entry: String
     
     let rows = [
@@ -26,7 +31,8 @@ struct NumberPadView: View {
                 HStack(spacing: 1) {
                     ForEach(row, id: \.self) { buttonTitle in
                         Button(action: {
-                            self.buttonTapped(buttonTitle)
+                            selection = IdentifiableInt(value: buttonTitle)
+                            //self.buttonTapped(buttonTitle)
                         }) {
                             Text(String(buttonTitle))
                                 .frame(width: 40, height: 40)
@@ -38,23 +44,25 @@ struct NumberPadView: View {
                         .frame(width: 40, height: 40)
                     }
                 }
-                //.frame(maxWidth: .infinity) // Ensure each row takes full width
             }
         }
-        //.padding()
-        //.frame(maxWidth: .infinity, maxHeight: .infinity) // Ensure the entire VStack takes up full space
     }
-    
+    /*
     // Next: update buttonTapped
     private func buttonTapped(_ theSelection: Int) {
         print("ButtonTapped \(theSelection)")
+        selection = IdentifiableInt(value: theSelection)
+        /*
         //if title == "⌫" {
         //    text = String(text.dropLast())
         //} else {
+        selection = 0
         selection = theSelection
             //text += title
        // }
+         */
     }
+     */
     /*
     private func enterTapped() {
         entered_entry = text
