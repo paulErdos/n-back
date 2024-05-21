@@ -11,37 +11,40 @@ import SwiftUI
 struct NBackView: View {
     @Binding var n: Int
     @State var selection: IdentifiableInt = IdentifiableInt(value: 0)
-   // @State var entered_entry: String = "bar"
-    @State var queue: [QueueItem] = [QueueItem(value: 1)]//, 2, 3, 4, 5]
-    //@State private var queueView = QueueView(queue: $queue) // No parentheses here
+    @State var queue: [QueueItem] = [QueueItem(value: 1)]
+    var streak: Int = 0;  // Number correct in a row
+    @State var gameOver: Bool = false
 
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                QueueView(queue: $queue)
+                QueueView(queue: $queue, n: $n)
                     .frame(width: geometry.size.width, height: geometry.size.height * 0.3)
                 Spacer()
-                NumberPadView(selection: $selection)//, entered_entry: $entered_entry)
+                NumberPadView(selection: $selection)
                     .frame(width: geometry.size.width, height: geometry.size.height * 0.7)
                     .onChange(of: selection.id) { _ in
-                        print("change detected \(selection.value)")
-                        QueueView(queue: $queue).updateQueue()//newElement: newValue)
+                        handleSelectionChange(selection: selection, queue: queue)
                     }
-                     /*
-                    .onTapGesture {// newValue in
-                        //print("change detected \(newValue)")
-                        QueueView(queue: $queue).updateQueue()
-                        /*
-                        print("Tapped")
-                        queue.append(Int.random(in: 1...100))
-                        if queue.count > 5 {
-                            queue.removeFirst()
-                        }
-                         */
-                      
-                    }
-                      */
+                
+                if gameOver {
+                    NavigationLink(
+                        destination: MainMenuView(),
+                        isActive: $gameOver,
+                        label: {Text("foo")}
+                        )
+                    .hidden()
+                }
             }
         }
     }
+    
+    private func handleSelectionChange(selection: IdentifiableInt, queue: [QueueItem]) {
+        if selection.value != queue[0].value {
+            gameOver = true
+        }
+        
+        QueueView(queue: $queue, n: $n).updateQueue()
+    }
 }
+

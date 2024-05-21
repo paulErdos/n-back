@@ -37,7 +37,7 @@ struct CounterView: View {
                     .background(RoundedRectangle(cornerRadius: 10).fill(Color.black))
 
                 Button(action: {
-                    if self.n < 100 {
+                    if self.n < 6 {
                         self.n += 1
                     }
                 }) {

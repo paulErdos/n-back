@@ -8,11 +8,11 @@ struct QueueItem: Identifiable {
 
 struct QueueView: View {
     @Binding var queue: [QueueItem]
+    @Binding var n: Int
 
-    func updateQueue() {//newElement: Int) {
+    func updateQueue() {
         let newElement = QueueItem(value: Int.random(in: 1...9))
-        print("update called \(newElement)")
-        if queue.count < 5 {
+        if queue.count < n {
             queue.append(newElement)
         } else {
             queue.removeFirst()
