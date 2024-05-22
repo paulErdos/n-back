@@ -26,6 +26,7 @@
 		F486031C2B2083A30093B73E /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F486031B2B2083A30093B73E /* CounterView.swift */; };
 		F4B24D9A2B208FBA00465E94 /* NBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B24D992B208FBA00465E94 /* NBackView.swift */; };
 		F4CBC4D72BFB491300DC8513 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC4D62BFB491300DC8513 /* MainMenuView.swift */; };
+		F4CBC4D92BFD32C900DC8513 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC4D82BFD32C900DC8513 /* GameOverView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		F486031B2B2083A30093B73E /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		F4B24D992B208FBA00465E94 /* NBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBackView.swift; sourceTree = "<group>"; };
 		F4CBC4D62BFB491300DC8513 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
+		F4CBC4D82BFD32C900DC8513 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				F4B24D992B208FBA00465E94 /* NBackView.swift */,
+				F4CBC4D82BFD32C900DC8513 /* GameOverView.swift */,
 				F40103012BF67AD90038A63B /* QueueView.swift */,
 				F48602D52B2082900093B73E /* n-back WatchKit App */,
 				F48602E02B2082920093B73E /* n-back WatchKit Extension */,
@@ -411,6 +414,7 @@
 				F48602E82B2082920093B73E /* NotificationView.swift in Sources */,
 				F486031C2B2083A30093B73E /* CounterView.swift in Sources */,
 				F40103022BF67AD90038A63B /* QueueView.swift in Sources */,
+				F4CBC4D92BFD32C900DC8513 /* GameOverView.swift in Sources */,
 				F417CBBC2B3B6E40001E8D8D /* NumberPadView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
